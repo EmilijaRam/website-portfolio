@@ -8,100 +8,261 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+
+<header>
   <h1>Hello, I'm Emilija Ramova 👋</h1>
   <p>Junior developer passionate about learning, growing, and creating meaningful projects. Quick to adapt and eager to contribute!</p>
   <button id="theme-toggle">Switch Theme</button>
 </header>
 
- <!-- Main content (Projects + Skills side by side) -->
-  <section id="main-content">
-    <div class="content-wrapper">
-       
-      
-      <!-- Projects -->
-      <div class="projects-section">
-        <h2>My Projects</h2>
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <div class="project-card">
-            <img src="images/weather.png" alt="Weather Tracker Project">
-            <h3>Weather Tracker Historical Data</h3>
-            <p>Tracks historical weather data using Python and APIs for analysis and visualization.</p>
-            <a href="https://github.com/EmilijaRam/weather-tracker-historical-data" target="_blank">View on GitHub</a>
-          </div>
+<!-- Tabs -->
+<section id="tabs">
+  <div class="tab-buttons">
+    <button class="tab-btn active" data-tab="about">About Me</button>
+    <button class="tab-btn" data-tab="skills">Key Skills</button>
+    <button class="tab-btn" data-tab="languages">Languages</button>
+    <button class="tab-btn" data-tab="experience">Experience</button>
+    <button class="tab-btn" data-tab="education">Education</button>
+    <button class="tab-btn" data-tab="certifications">Certifications</button>
+    <button class="tab-btn" data-tab="projects">Projects</button>
 
-           <!-- Project 2 -->
-          
-          <div class="project-card">
-            <img src="images/Telegram-bots.png" alt="Telegram Bot Project">
-            <h3>Telegram Informativen Bot</h3>
-            <p>A bot built with Python that sends informative updates to Telegram users automatically.</p>
-            <a href="https://github.com/EmilijaRam/telegram-informativen-bot" target="_blank">View on GitHub</a>
-          </div>
-   <!-- Project 3 -->
+  </div>
 
-          <div class="project-card">
-            <img src="images/inflation_index.png" alt="Inflacija Indexi Project">
-            <h3>Inflacija Indexi</h3>
-            <p>Tracks and visualizes inflation indexes with Python and data visualization tools.</p>
-            <a href="https://github.com/EmilijaRam/inflacija-indexi" target="_blank">View on GitHub</a>
-          </div>
+  <div class="tab-content">
+    <!-- About Me -->
+    <div class="tab-panel active" id="about">
+      <section class="section">
+        <h2>👩‍💻 About Me</h2>
+        <p>
+          I am a motivated and adaptable IT professional with a strong foundation in <strong>software engineering, web development, and regulatory compliance</strong>.
+        </p>
+        <p>
+          I have hands-on experience building and maintaining <strong>WordPress websites</strong>, implementing <strong>ISO 9001 & ISO 27001 standards</strong>, and ensuring <strong>GDPR compliance</strong> through data-driven analysis.
+        </p>
+        <p>
+          Passionate about delivering <strong>secure, efficient, and scalable digital solutions</strong>, I thrive on learning new technologies and applying them to solve real-world challenges.
+        </p>
+        <p>
+          I am proficient in <strong>Python</strong>, <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, and enjoy creating efficient, scalable, and user-friendly digital solutions.
+        </p>
 
-          <!-- Project 4 -->
+      </section>
+    </div>
 
-          <div class="project-card">
-            <img src="images/taskspiker.png" alt="TaskSpiker Project">
-            <h3>TaskSpiker</h3>
-            <p>TAn app for task management and reminders to improve productivity.</p>
-            <a href="https://github.com/EmilijaRam/TaskSpiker" target="_blank">View on GitHub</a>
-          </div>
+    <!-- Key Skills -->
+    <div class="tab-panel" id="skills">
+      <section class="section">
+        <h2>🔧 Key Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">🌐 WordPress Development & Maintenance</div>
+          <div class="skill-card">💻 HTML5, CSS3, JavaScript</div>
+          <div class="skill-card">🐍 Python (basic to intermediate)</div>
+          <div class="skill-card">📑 ISO 9001 & ISO 27001</div>
+          <div class="skill-card">🛡️ GDPR Compliance & Internal Controls</div>
+          <div class="skill-card">📈 SEO, Optimization & Analytics</div>
+          <div class="skill-card">🗄️ Oracle Database 12c</div>
+          <div class="skill-card">📊 MS Office 365, Excel & Pivot Tables</div>
         </div>
 
-        <!-- See all GitHub button -->
-        <div class="see-all">
-          <a href="https://github.com/EmilijaRam" class="btn" target="_blank">See all on GitHub</a>
-        </div>
-      </div>
-
-      <!-- Skills -->
-      <div class="skills-section">
-        <h2>My Skills</h2>
-        <p>Technologies I work with:</p>
+        <h3>Technologies I work with:</h3>
         <div class="skill">
           <span>🐍 Python</span>
-          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="90%"></div>
+          </div>
         </div>
         <div class="skill">
-          <span> ⚡JavaScript</span>
-          <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+          <span>⚡ JavaScript</span>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="70%"></div>
+          </div>
         </div>
-      
         <div class="skill">
-          <span> 🌐 HTML & CSS</span>
-          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+          <span>🌐 HTML & CSS</span>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="80%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>🛢️ Oracle Database</span>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="75%"></div>
+          </div>
+        </div>
+    
+    
+        <div class="skill">
+          <span>🛡️ GDPR Compliance</span>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="100%"></div>
+           </div>
         </div>
 
         <div class="skill">
-          <span>🛢️ Oracle</span>
-          <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+          <span>📑 ISO 9001 & ISO 27001</span>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="100%"></div>
+          </div>
         </div>
+      </section>
+    </div>
+    <!-- Languages -->
+    <div class="tab-panel" id="languages">
+      <section class="section">
+        <h2>🌍 Languages</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>🇲🇰 Macedonian</h3>
+            <p>(Native)</p>
+          </div>
+          <div class="timeline-item">
+            <h3>🇬🇧 English</h3>
+            <p>(Advanced)</p>
+          </div>
+          <div class="timeline-item">
+            <h3>🇷🇸 Serbian</h3>
+            <p>(Advanced)</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Experience -->
+    <div class="tab-panel" id="experience">
+      <section class="section">
+        <h2>📌 Experience Highlights</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Head of Department for Standardization @ MAPAS</h3>
+            <p>Managing WordPress websites, implementing ISO standards, GDPR compliance, internal audits</p>
+          </div>
+          <div class="timeline-item">
+            <h3>External Expert @ FITD</h3>
+            <p>Evaluating innovative project proposals on national calls</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Product Export Manager @ MGI Skopje</h3>
+            <p>Organizing final production and timely deliveries</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Final Quality Controller @ Okiteks Skopje</h3>
+            <p>Ensuring export-ready quality for luxury fashion brand ESCADA</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Production Manager @ Astibo-Beas</h3>
+            <p>Process optimization, planning, performance evaluation, and salary calculations</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Education -->
+    <div class="tab-panel" id="education">
+      <section class="section">
+        <h2>🎓 Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>BSc in Information Technology – Software Engineering</h3>
+            <p>European University Macedonia, Skopje</p>
+          </div>
+          <div class="timeline-item">
+            <h3>BSc in Garment Engineering</h3>
+            <p>Faculty of Technology and Metallurgy, Skopje</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Certifications -->
+    <div class="tab-panel" id="certifications">
+      <section class="section">
+        <h2>🎯 Certifications & Training</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Python Programming </h3>
+            <p> Semos Education</p>
+          </div>
+          
+          <div class="timeline-item">
+            <h3>Oracle SQL (12c Introduction)</h3>
+            <p>Semos Education</p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Web Development: HTML5, CSS3, JavaScript, C#, ASP.NET Core MVC </h3>
+            <p>Semos Education</p>
+          </div>
+          
+          <div class="timeline-item">
+            <h3>Risk Management </h3>
+            <p>House of Training, Luxembourg</p>
+          </div>
+          
+          <div class="timeline-item">
+            <h3>Advanced Excel & Pivot Tables</h3>
+            <p>Semos Education</p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Microsoft Office 365</h3>
+            <p>Semos Education</p>
+          </div>
+
+          
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<div class="tab-panel" id="projects">
+  <section class="projects">
+    <h1>My Projects</h1>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="images/weather.png" alt="Weather Tracker Project">
+        <h3>Weather Tracker Historical Data</h3>
+        <p>Tracks historical weather data using Python and APIs for analysis and visualization.</p>
+        <a href="https://github.com/EmilijaRam/weather-tracker-historical-data" target="_blank">View on GitHub</a>
+      </div>
+      
+      <div class="project-card">
+        <img src="images/Telegram-bots.png" alt="Telegram Bot Project">
+        <h3>Telegram Informativen Bot</h3>
+        <p>A bot built with Python that sends informative updates to Telegram users automatically.</p>
+        <a href="https://github.com/EmilijaRam/telegram-informativen-bot" target="_blank">View on GitHub</a>
+      </div>
+      
+      <div class="project-card">
+        <img src="images/inflation_index.png" alt="Inflacija Indexi Project">
+        <h3>Inflacija Indexi</h3>
+        <p>Tracks and visualizes inflation indexes with Python and data visualization tools.</p>
+        <a href="https://github.com/EmilijaRam/inflacija-indexi" target="_blank">View on GitHub</a>
+      </div>
+      
+      <div class="project-card">
+        <img src="images/taskspiker.png" alt="TaskSpiker Project">
+        <h3>TaskSpiker</h3>
+        <p>An app for task management and reminders to improve productivity.</p>
+        <a href="https://github.com/EmilijaRam/TaskSpiker" target="_blank">View on GitHub</a>
       </div>
     </div>
-  </section>
 
-    <ul>
-      <li><a href="https://github.com/EmilijaRam" target="_blank">See all on GitHub</a></li>
-    </ul>
+    <div class="see-all">
+      <a href="https://github.com/EmilijaRam" class="btn" target="_blank">See all on GitHub</a>
+    </div>
   </section>
+  </div>
 
-   <!-- Contact -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:eme_stoilkova@yahoo.com">eme_stoilkova@yahoo.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/emilijaramova" target="_blank">emilijaramova</a></p>
-  </section>
+<!-- Contact -->
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:eme_stoilkova@yahoo.com">eme_stoilkova@yahoo.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/emilijaramova" target="_blank">emilijaramova</a></p>
+</section>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
