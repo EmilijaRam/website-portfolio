@@ -11,9 +11,12 @@ const tabPanels = document.querySelectorAll('.tab-panel');
 tabBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     tabBtns.forEach(b => b.classList.remove('active'));
-    tabPanels.forEach(p => p.classList.remove('active'));
-
     btn.classList.add('active');
+   
+    const target = btn.dataset.tab;
+    tabPanels.forEach(panel =>{
+      panel.classList.toggle('active', panel.id === target);
+    });
     document.getElementById(btn.dataset.tab).classList.add('active');
 
     // Animate skills when tab opens

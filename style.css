@@ -15,26 +15,34 @@ header {
   color: white;
 }
 
-h1 {
-  margin-bottom: 0.5rem;
+h1, h2, h3 {
+  margin-bottom: 20px;
 }
 
 section {
-  padding: 2rem;
+  padding: 60px 20px;  /* горе/долу 60px, лево/десно 20px */
 }
 
 a {
-  color: #6b8e23;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
+p {
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;  /* центрирање на содржината */
+}
 a:hover {
-  text-decoration: underline;
+  color: var(--accent-color);
 }
 
 button, .btn {
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 10px 20px;
   border: none;
   background: #6b8e23;
   color: white;
@@ -44,7 +52,7 @@ button, .btn {
 }
 
 button:hover, .btn:hover{
-  background: #556b2f; /* Dark Olive Green */
+  background: var(--accent-color); /* Dark Olive Green */
 }
 
 /* Dark mode */
@@ -70,6 +78,36 @@ button:hover, .btn:hover{
 .dark-mode .btn:hover {
   background: #556b2f;
 }
+/* ================== FIX: Dark mode за таб копчиња ================== */
+.dark-mode .tab-btn {
+  background: #333;        /* темна позадина */
+  color: #fff;             /* светол текст */
+  border-color: #a6d08c;   /* зеленкаста граница */
+}
+
+.dark-mode .tab-btn.active {
+  background: #a6d08c;   /* акцент */
+  color: #333;           /* темен текст за контраст */
+}
+.dark-mode .tab-btn i {
+  color: inherit;  /* иконата ја следи бојата на текстот во dark mode */
+}
+
+.dark-mode .tab-btn:hover {
+  background: #6b8e23;   /* зелена нијанса */
+  color: #fff;
+}
+/* Timeline text visible in dark mode */
+.dark-mode .timeline-item {
+  background-color: #444; /* темна картичка */
+  color: #fff;            /* светол текст */
+}
+
+.dark-mode .timeline-item h3,
+.dark-mode .timeline-item p {
+  color: #fff;            /* осигурај видливост */
+}
+
 
 /* ================== Projects Section ================== */
 .projects-section {
@@ -100,6 +138,12 @@ button:hover, .btn:hover{
   display: flex;               /* FLEXBOX */
   flex-direction: column;      /* Подреди содржината вертикално */
   justify-content: space-between; /* Распореди: текстот горе, копчето долу */
+}
+
+.project-card i,
+.skill-card i {
+  color: inherit;
+  opacity: 1;  /* иконите секогаш видливи */
 }
 
 .project-card img {
@@ -231,16 +275,23 @@ button:hover, .btn:hover{
 }
 
 .skill-card {
-  background-color: #f7f7f7;
-  padding: 15px 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  font-size: 1rem;
-  transition: transform 0.2s;
+background-color: #fff;   /* бела позадина */
+  color: #333;              /* темен текст за контраст */
+  font-weight: 600;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
+  background-color: #f0f0f0; /* мала промена на hover */
+}
+.dark-mode .skill-card {
+  background-color: #333;  /* темна позадина */
+  color: #fff;             /* светол текст */
 }
 
 /* Languages */
@@ -311,6 +362,11 @@ section ul {
   font-weight: bold;
   transition: all 0.3s ease;
 }
+.tab-btn i {
+  color: inherit;  /* иконата ја наследува бојата на текстот */
+  transition: color 0.3s ease;
+}
+
 
 .tab-btn.active {
   background: #556b2f;
@@ -340,4 +396,89 @@ section ul {
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
+}
+
+/* Боја и типографија */
+:root {
+  --primary-color: #4CAF50;   /* зелена боја за акценти */
+  --secondary-color: #333333; /* темно сива за текст */
+  --accent-color: #FF9800;    /* портокалова за копчиња/линкови */
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Merriweather', serif;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--secondary-color);
+  background-color: #ffffff;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-secondary);
+}
+  /* Мобилни уреди */
+@media (max-width: 768px) {
+  section {
+    padding: 40px 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 20px;
+  }
+}
+
+/* Многу мали екрани (телефони) */
+@media (max-width: 768px) {
+  section {
+    padding: 40px 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  section {
+    padding: 30px 5px;
+  }
+}
+/* ================== Tabs fix ================== */
+.tab-panel {
+  display: none;           /* сите табови скриени по дифолт */
+}
+
+.tab-panel.active {
+  display: block;          /* активниот таб се гледа */
+}
+
+.tab-btn.active {
+  background: #a6d08c;     /* акцент боја */
+  color: #333;             /* темен текст за контраст */
 }
